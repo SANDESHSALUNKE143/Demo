@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricingEngine", "PricingEngine\PricingEngine.csproj", "{C27B017D-C09F-4604-9356-C34BE4214B5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PricingEngine.Tests", "PricingEngine.Tests\PricingEngine.Tests.csproj", "{6A849173-A3F0-4482-BF89-E0E172AFB649}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C27B017D-C09F-4604-9356-C34BE4214B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C27B017D-C09F-4604-9356-C34BE4214B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C27B017D-C09F-4604-9356-C34BE4214B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C27B017D-C09F-4604-9356-C34BE4214B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A849173-A3F0-4482-BF89-E0E172AFB649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A849173-A3F0-4482-BF89-E0E172AFB649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A849173-A3F0-4482-BF89-E0E172AFB649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A849173-A3F0-4482-BF89-E0E172AFB649}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
