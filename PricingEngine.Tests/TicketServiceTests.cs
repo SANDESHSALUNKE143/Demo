@@ -11,11 +11,11 @@ public class TicketServiceTests
 {
     
     Mock<ITrainRepository>  _trainRepository;
-    TicketService _ticketService;
+    StandardTicketService _ticketService;
     public TicketServiceTests()
     {
         _trainRepository = new Mock<ITrainRepository>();
-        _ticketService = new TicketService(_trainRepository.Object);
+        _ticketService = new StandardTicketService(_trainRepository.Object);
     }
     
     [Fact]
@@ -61,6 +61,7 @@ public class TicketServiceTests
             Route = new List<string> {"A", "B","C"},
             PricePerHop = 10
         };
+        
         _trainRepository.Setup(t => t.GetTrainByNumberAsync("T1")).ReturnsAsync(train);
         
         // Act
@@ -88,6 +89,7 @@ public class TicketServiceTests
             Route = new List<string> {"A", "B"},
             PricePerHop = 10
         };
+        
         _trainRepository.Setup(t => t.GetTrainByNumberAsync("T1")).ReturnsAsync(train);
         
         // Act

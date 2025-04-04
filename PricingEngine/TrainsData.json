@@ -1,2 +1,52 @@
-{
-}
+[
+  {
+    "TrainNumber": "T1",
+    "Route": ["A", "B", "C", "D"],
+    "PricePerHop": 10
+  },
+  {
+    "TrainNumber": "T2",
+    "Route": ["X", "Y", "Z"],
+    "PricePerHop": 15
+  },
+  {
+    "TrainNumber": "T3",
+    "Route": ["M", "N", "O", "P", "Q"],
+    "PricePerHop": 8
+  },
+  {
+    "TrainNumber": "T4",
+    "Route": ["L1", "L2", "L3", "L4"],
+    "PricePerHop": 12
+  },
+  {
+    "TrainNumber": "T5",
+    "Route": ["G", "H", "I"],
+    "PricePerHop": 20
+  },
+  {
+    "TrainNumber": "T6",
+    "Route": ["S1", "S2", "S3", "S4", "S5"],
+    "PricePerHop": 5
+  },
+  {
+    "TrainNumber": "T7",
+    "Route": ["Pune", "Mumbai", "Nashik", "Nagpur"],
+    "PricePerHop": 18
+  },
+  {
+    "TrainNumber": "T8",
+    "Route": ["Delhi", "Agra", "Jaipur"],
+    "PricePerHop": 22
+  },
+  {
+    "TrainNumber": "T9",
+    "Route": ["Chennai", "Bangalore", "Hyderabad"],
+    "PricePerHop": 14
+  },
+  {
+    "TrainNumber": "T10",
+    "Route": ["Kolkata", "Patna", "Varanasi", "Lucknow"],
+    "PricePerHop": 16
+  }
+]

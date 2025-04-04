@@ -3,16 +3,16 @@ using PricingEngine.Repositories;
 
 namespace PricingEngine.Services;
 
-public class TicketService
+public class StandardTicketService: BaseTicketService
 {
     private readonly ITrainRepository _trainRepository;
 
-    public TicketService(ITrainRepository trainRepository)
+    public StandardTicketService(ITrainRepository trainRepository): base(trainRepository)
     {
         _trainRepository = trainRepository;
     }
     
-    public async Task<double> CalculateTicketPriceAsync(TicketRequest ticketRequest)
+    public override async Task<double> CalculateTicketPriceAsync(TicketRequest ticketRequest)
     {
         
         

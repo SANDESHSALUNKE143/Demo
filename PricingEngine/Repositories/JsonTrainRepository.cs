@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
 using PricingEngine.Models;
 
 namespace PricingEngine.Repositories;
@@ -8,11 +9,12 @@ public class JsonTrainRepository:ITrainRepository
     private readonly string _filePath;
     private readonly List<Train> _trains;
 
-    public JsonTrainRepository(string filePath)
+    public JsonTrainRepository(IConfiguration  configuration)
     {
-        _filePath = filePath;
+        _filePath = configuration["DatabaseSettings:JsonPath"]??"";
         _trains = LoadData();
     }
+    
 
     private List<Train> LoadData()
     {
