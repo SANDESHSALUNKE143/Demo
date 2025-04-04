@@ -17,8 +17,8 @@ var service = new ServiceCollection();
 
 service.AddSingleton<IConfiguration>(config);
 service.AddSingleton<ITrainRepository, JsonTrainRepository>();
-service.AddSingleton<ITicketService, StandardTicketService>();
-// service.AddSingleton<ITicketService, DiscountedTicketService>();
+service.AddSingleton< StandardTicketService>();
+service.AddSingleton< DiscountedTicketService>();
 
 //get path from appsettings.json
 
@@ -28,15 +28,15 @@ service.AddSingleton<ITicketService, StandardTicketService>();
 var serviceProvider = service.BuildServiceProvider();
 
 
-ITicketService ticketService = serviceProvider.GetRequiredService<ITicketService>();
-// DiscountedTicketService discountedTicketService = serviceProvider.GetRequiredService<DiscountedTicketService>();
+StandardTicketService ticketService = serviceProvider.GetRequiredService<StandardTicketService>();
+DiscountedTicketService discountedTicketService = serviceProvider.GetRequiredService<DiscountedTicketService>();
 
 var ticketRequest = new TicketRequest
 {
     TrainNumber = "T1",
     From = "A",
     To = "C",
-    NumberOfPassengers = 2
+    NumberOfPassengers = 10
 };
 
 
@@ -44,6 +44,6 @@ var price = ticketService.CalculateTicketPriceAsync(ticketRequest).Result;
 
 Console.WriteLine($"Price: {price}");
 
-// var discountedPrice = discountedTicketService.CalculateTicketPriceAsync(ticketRequest).Result;
-//
-// Console.WriteLine($"Discounted Price: {discountedPrice}");
+var discountedPrice = discountedTicketService.CalculateTicketPriceAsync(ticketRequest).Result;
+
+Console.WriteLine($"Discounted Price: {discountedPrice}");
